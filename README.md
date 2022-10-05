@@ -4,8 +4,8 @@
 
 **Server:** Node, Express, Prisma ORM, Postgresql 
 
-## Backend Commands
-### Server Open with 
+## Commands
+### Server  
 ```
 npm run dev
 ```
@@ -15,8 +15,7 @@ npm run dev
 npx prisma studio
 ```
 
-## Frontend Commands
-### React App Open with 
+### React App  
 ```
 npm start
 ```

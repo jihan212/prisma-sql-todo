@@ -1,20 +1,22 @@
-# prisma-sql-todo
+## Tech Stack
 
-ToDO app by Node, Express, Prisma ORM
+**Client:** React
 
-# Backend Commands
-## Server Open with 
+**Server:** Node, Express, Prisma ORM, Postgresql 
+
+## Backend Commands
+### Server Open with 
 ```
 npm run dev
 ```
 
-## Prisma Studio 
+### Prisma Studio 
 ```
 npx prisma studio
 ```
 
-# Frontend Commands
-## React App Open with 
+## Frontend Commands
+### React App Open with 
 ```
 npm start
 ```

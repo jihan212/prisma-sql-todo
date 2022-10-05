@@ -1,0 +1,31 @@
+# Get All ToDos
+###
+GET http://localhost:5000/api/todos
+
+# Get ToDo by id
+###
+GET http://localhost:5000/api/todos/3
+
+# Post a ToDo
+###
+POST http://localhost:5000/api/todos
+Content-Type: application/json
+
+{
+    "Title": "Sleeping",
+    "status": true
+}
+
+# Delete ToDo by id
+###
+DELETE http://localhost:5000/api/todos/3
+
+# Update ToDo by id
+###
+PATCH  http://localhost:5000/api/todos/3
+Content-Type: application/json
+
+{
+    "Title" : "Sleeping",
+    "status": false
+}

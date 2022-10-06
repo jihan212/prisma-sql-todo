@@ -1,63 +1,58 @@
-import React from "react";
-import Todo from "./Todo";
-import { Paper, TextField } from "@material-ui/core";
-import { Checkbox, Button } from "@material-ui/core";
-import "./App.css";
+import React from 'react';
+import Todo from './Todo';
+import './App.css'
+import { Paper, TextField, Checkbox, Button } from '@material-ui/core';
 
 class App extends Todo {
-    state = { todo: [], currentTodo: "" };
+    state = {todos:[], currentTodo:""}
     render() {
-        const { todo } = this.state;
+        const { todos } = this.state;
+        console.log(todos);
         return (
-            <div className="App flex">
+            <div className='App flex'>
                 <Paper elevation={3} className="container">
-                    <div className="heading">TO-DO</div>
+                    <div className='heading'>To-Do</div>
                     <form
-                        onSubmit={this.handleSubmit}
-                        className="flex"
-                        style={{ margin: "20px 5px" }}
+                    onSubmit={this.handleSubmit}
+                    className="flex"
+                    style={{ marging: "15px 0" }}
                     >
                         <TextField
-                            variant="outlined"
-                            size="small"
+                            variant='outlined'
+                            size='small'
                             style={{ width: "80%" }}
-                            value={this.state.currentTodo}
+                            value={ this.state.currentTodo }
                             required={true}
-                            onChange={this.handleChange}
-                            placeholder="Add New TO-DO"
+                            onChange={this.hendleChange}
+                            placeholder="Add New To-Do"
                         />
-                        <button
-                            type="submit"
-                            className="button"
+                        <Button
+                            style={{ height: "40px" }}
+                            color="primary"
+                            variant='outlined'
+                            type='submit'
                         >
-                            Add Todo
-                        </button>
+                            Add Task
+                        </Button>
                     </form>
                     <div>
-                        {todo.map((todo) => (
-                            <Paper
-                                key={todo.id}
-                                className="flex todo_container"
-                            >
+                        {todos.map((todo) => (
+                            <Paper key={todo.id} className="flex todo_container">
                                 <Checkbox
                                     checked={todo.completed}
                                     onClick={() => this.handleUpdate(todo.id)}
                                     color="primary"
                                 />
                                 <div
-                                    className={
-                                        todo.completed
-                                            ? "todo line_through"
-                                            : "todo"
-                                    }
+                                className={todo.completed ? "todo line_through" : "todo"}
                                 >
-                                    {todo.todo}
+                                {todo.todo}
                                 </div>
                                 <Button
-                                    onClick={() => this.handleDelete(todo._id)}
+                                    onClick={() => this.handleDelete(todo.id)}
                                     color="secondary"
                                 >
-                                    delete
+                                    Delete
                                 </Button>
                             </Paper>
                         ))}

@@ -22,7 +22,7 @@ class App extends Todo {
                             style={{ width: "80%" }}
                             value={ this.state.currentTodo }
                             required={true}
-                            onChange={this.hendleChange}
+                            onChange={this.handleChange}
                             placeholder="Add New To-Do"
                         />
                         <Button
@@ -47,11 +47,11 @@ class App extends Todo {
                                 >
                                 {todo.Title}
                                 </div>
-                                <div
+                                <small
                                 className={todo.status ? "time line_through" : "time"}
                                 >
                                 {todo.createdAt}
-                                </div>
+                                </small>
                                 <Button
                                     onClick={() => this.handleDelete(todo.id)}
                                     color="secondary"

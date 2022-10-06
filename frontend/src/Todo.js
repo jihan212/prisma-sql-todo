@@ -19,7 +19,7 @@ class Todo extends Component {
         }
     }
 
-    hendleChange = ({currentTodo:input}) => {
+    handleChange = ({currentTodo:input}) => {
         this.setState({ currentTodo: input.value });
     }
 

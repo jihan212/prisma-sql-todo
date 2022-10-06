@@ -32,6 +32,12 @@
     margin-left: 10px;
 }
 
+.time {
+    flex-grow: 2;
+    margin-left: 10px;
+    color: gray;
+}
+
 .line_through {
     text-decoration: line-through;
 }

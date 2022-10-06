@@ -42,9 +42,9 @@ class Todo extends Component {
             const todos = [...originalTodos];
             const index = todos.findIndex((todo) => todo.id === currentTodo);
             todos[index] = { ...todos[index] };
-            todos[index].completed = !todos[index].completed;
+            todos[index].status = !todos[index].status;
             this.setState({ todos });
-            await updateToDo(currentTodo, { completed: todos[index].completed });
+            await updateToDo(currentTodo, { status: todos[index].status });
         } catch (error) {
             this.setState({ todos: originalTodos })
             console.log(error);

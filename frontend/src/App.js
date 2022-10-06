@@ -39,14 +39,19 @@ class App extends Todo {
                         {todos.map((todo) => (
                             <Paper key={todo.id} className="flex todo_container">
                                 <Checkbox
-                                    checked={todo.completed}
+                                    checked={todo.status}
                                     onClick={() => this.handleUpdate(todo.id)}
                                     color="primary"
                                 />
                                 <div
-                                className={todo.completed ? "todo line_through" : "todo"}
+                                className={todo.status ? "todo line_through" : "todo"}
                                 >
-                                {todo.todo}
+                                {todo.Title}
+                                </div>
+                                <div
+                                className={todo.status ? "time line_through" : "time"}
+                                >
+                                {todo.createdAt}
                                 </div>
                                 <Button
                                     onClick={() => this.handleDelete(todo.id)}

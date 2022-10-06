@@ -7,7 +7,6 @@ class App extends Todo {
     state = {todos:[], currentTodo:""}
     render() {
         const { todos } = this.state;
-        console.log(todos);
         return (
             <div className='App flex'>
                 <Paper elevation={3} className="container">

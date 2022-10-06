@@ -12,8 +12,8 @@ POST http://localhost:5000/api/todos
 Content-Type: application/json
 
 {
-    "Title": "Sleeping",
-    "status": true
+    "Title": "Eating",
+    "status": false
 }
 
 # Delete ToDo by id
@@ -22,10 +22,9 @@ DELETE http://localhost:5000/api/todos/3
 
 # Update ToDo by id
 ###
-PATCH  http://localhost:5000/api/todos/3
+PATCH  http://localhost:5000/api/todos/5
 Content-Type: application/json
 
 {
-    "Title" : "Sleeping",
-    "status": false
+    "id" : 1
 }

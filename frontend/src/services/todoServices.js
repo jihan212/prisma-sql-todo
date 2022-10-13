@@ -5,8 +5,8 @@ export function getToDos() {
     return axios.get(apiUrl);
 }
 
-export function addTodo(todo) {
-    return axios.post(apiUrl, todo);
+export function addTodo(Title) {
+    return axios.post(apiUrl, Title);
 }
 
 export function updateToDo(id, todo) {

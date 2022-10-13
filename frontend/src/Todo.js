@@ -7,7 +7,7 @@ import {
 } from "./services/todoServices";
 
 class Todo extends Component {
-    state = {todos:[], currentTodo:"" }
+    state = { todos: [], currentTodo: "" }
     
     async componentDidMount() {
         try {
@@ -19,20 +19,19 @@ class Todo extends Component {
         }
     }
 
-    handleChange = ({ currentTodo: input }) => {
+    handleChange = (e) => {
         try {
-            console.log(input);
+            this.setState({currentTodo : e.target.value})
         } catch (error) {
             console.log(error);
         }
-        // this.setState({ currentTodo: input.value });
     }
 
     handleSubmit = async (e) => {
         e.preventDefault();
         const originalTodos = this.state.todos
         try {
-            const { data } = await addTodo({ todo: this.state.currentTodo });
+            const { data } = await addTodo({ Title: this.state.currentTodo });
             const todos = originalTodos;
             todos.push(data);
             this.setState({todos, currentTodo:""})

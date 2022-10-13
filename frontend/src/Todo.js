@@ -19,8 +19,13 @@ class Todo extends Component {
         }
     }
 
-    handleChange = ({currentTodo:input}) => {
-        this.setState({ currentTodo: input.value });
+    handleChange = ({ currentTodo: input }) => {
+        try {
+            console.log(input);
+        } catch (error) {
+            console.log(error);
+        }
+        // this.setState({ currentTodo: input.value });
     }
 
     handleSubmit = async (e) => {
